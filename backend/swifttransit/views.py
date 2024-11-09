@@ -3,7 +3,13 @@ from rest_framework import viewsets
 
 from swifttransit.models import Occupancy, Box, OnTime, Changeover, UserCredits
 from swifttransit.serializers import OccupancySerializer, BoxSerializer, OnTimeSerializer, ChangeoverSerializer, \
-    UserCreditsSerializer
+    UserCreditsSerializer, BusLineSerializer
+from swifttransit.models import Occupancy, Box, OnTime, Changeover, BusLine
+
+
+class BusLineViewSet(viewsets.ModelViewSet):
+    queryset = BusLine.objects.all()
+    serializer_class = BusLineSerializer
 
 
 class OccupancyViewSet(viewsets.ModelViewSet):

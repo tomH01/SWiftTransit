@@ -4,6 +4,7 @@ from rest_framework import routers
 from swifttransit import views
 
 router = routers.DefaultRouter()
+router.register(r'busline', views.BusLineViewSet)
 router.register(r'occupancy', views.OccupancyViewSet)
 router.register(r'box', views.BoxViewSet)
 router.register(r'changeover', views.ChangeoverViewSet)
