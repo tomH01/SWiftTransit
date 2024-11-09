@@ -10,8 +10,8 @@ Always rerun this after incoming changes.
 ```python manage.py runserver```
 
 # Access API
-[occupancy](localhost:8000/api/occupancy) <br>
-[box](localhost:8000/api/box) <br>
-[changeover](localhost:8000/api/changeover) <br>
-[on-time](localhost:8000/api/on-time) <br>
-[user-credits](localhost:8000/api/user-credits) <br>
+[occupancy](http://localhost:8000/api/occupancy) <br>
+[box](http://localhost:8000/api/box) <br>
+[changeover](http://localhost:8000/api/changeover) <br>
+[on-time](http://localhost:8000/api/on-time) <br>
+[user-credits](http://localhost:8000/api/user-credits) <br>
