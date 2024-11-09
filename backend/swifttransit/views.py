@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from swifttransit.models import Occupancy, Box, OnTime, Changeover, UserCredits, Station, BusLine
 from swifttransit.serializers import OccupancySerializer, BoxSerializer, OnTimeSerializer, ChangeoverSerializer, \
@@ -50,3 +51,64 @@ class StationViewSet(viewsets.ModelViewSet):
             serializer = StationSerializer(matches, many=True)
             return Response(serializer.data)
         return Response({"error": "Prefix parameter is required."}, status=400)
+
+
+class Routes(APIView):
+    def get(self, request):
+        routes = [
+            [
+                {
+                    'name': 10,
+                    'type': 'bus',
+                    'departure': '7:21',
+                    'arrival': '7:25',
+                    'departure_delay': 3,
+                    'arrival_delay': 4
+                },
+                {
+                    'name': 8,
+                    'type': 'bus',
+                    'departure': '7:32',
+                    'arrival': '7:52',
+                    'departure_delay': 2,
+                    'arrival_delay': 1
+                }
+            ],
+            [
+                {
+                    'name': 10,
+                    'type': 'bus',
+                    'departure': '7:51',
+                    'arrival': '7:55',
+                    'departure_delay': 2,
+                    'arrival_delay': 2
+                },
+                {
+                    'name': 8,
+                    'type': 'bus',
+                    'departure': '7:32',
+                    'arrival': '7:52',
+                    'departure_delay': 3,
+                    'arrival_delay': 1
+                }
+            ],
+            [
+                {
+                    'name': 10,
+                    'type': 'bus',
+                    'departure': '8:21',
+                    'arrival': '8:25',
+                    'departure_delay': 5,
+                    'arrival_delay': 4
+                },
+                {
+                    'name': 8,
+                    'type': 'bus',
+                    'departure': '8:32',
+                    'arrival': '8:52',
+                    'departure_delay': 3,
+                    'arrival_delay': 3
+                }
+            ],
+        ]
+        return Response(routes)
