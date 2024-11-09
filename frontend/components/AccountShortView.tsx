@@ -4,7 +4,10 @@ import { Text, Pressable, StyleSheet, View, Image } from "react-native";
 import { User } from "@/types/user";
 import { ThemedText } from "./ThemedText";
 
-export function AccountShortView({ user }: PropsWithChildren & { user: User }) {
+export function AccountShortView({
+  user,
+  onPress,
+}: PropsWithChildren & { user: User; onPress?: () => void }) {
   return (
     <Pressable
       style={{
@@ -13,7 +16,7 @@ export function AccountShortView({ user }: PropsWithChildren & { user: User }) {
         gap: 8,
         alignItems: "center",
       }}
-      onPress={() => {}}
+      onPress={onPress}
     >
       <View style={styles.avatar}>
         {user.avatar ? (

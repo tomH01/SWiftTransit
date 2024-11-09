@@ -14,8 +14,11 @@ import { AccountShortView } from "@/components/AccountShortView";
 import { BigIconButton } from "@/components/BigIconButton";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { router } from "expo-router";
+import UserContext from "@/hooks/useUserData";
+import { useContext } from "react";
 
 export default function HomeScreen() {
+  const { user, setUser } = useContext(UserContext);
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
@@ -27,12 +30,13 @@ export default function HomeScreen() {
       }
       headerContent={
         <AccountShortView
-          user={{
-            name: "John",
-            surname: "Doe",
-            email: "john@doe.com",
-            points: 100,
-            id: "1",
+          user={user}
+          onPress={() => {
+            if (user.name == "Boris") {
+              setUser({ ...user, name: "Paul", surname: "H.", points: 720 });
+            } else {
+              setUser({ ...user, name: "Boris", surname: "P.", points: 100 });
+            }
           }}
         />
       }
@@ -60,9 +64,9 @@ export default function HomeScreen() {
         ></BigIconButton>
         <BigIconButton
           title="TüBus"
-          color="orange"
+          color="red"
           onPress={() => {
-            console.log("TüBus");
+            router.push("/bus");
           }}
           icon={<MaterialCommunityIcons name="bus" size={56} color="black" />}
         ></BigIconButton>
@@ -70,13 +74,13 @@ export default function HomeScreen() {
           title="Coono"
           color="blue"
           onPress={() => {
-            console.log("Coono");
+            setUser({ ...user, points: user.points + 1 });
           }}
           icon={<MaterialCommunityIcons name="car" size={56} color="black" />}
         ></BigIconButton>
         <BigIconButton
           title="Parking"
-          color="red"
+          color="yellow"
           onPress={() => {
             console.log("Parking");
           }}
@@ -86,7 +90,7 @@ export default function HomeScreen() {
         ></BigIconButton>
         <BigIconButton
           title="Plan Your Journey"
-          color=""
+          color="green"
           onPress={() => {
             router.push("/routing");
           }}
