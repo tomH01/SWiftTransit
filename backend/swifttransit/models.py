@@ -31,28 +31,6 @@ class Occupancy(BaseFeedback):
                           max_length=64)
 
 
-class BikeSlot(BaseFeedback):
-    box_count = IntegerField(null=False,
-                             blank=False,
-                             default=1,
-                             validators=[MinValueValidator(0), MaxValueValidator(2)])
-    bike_count = IntegerField(null=False,
-                              blank=False,
-                              default=1,
-                              validators=[MinValueValidator(0), MaxValueValidator(4)])
-
-
-class PramSlot(BaseFeedback):
-    box_count = IntegerField(null=False,
-                             blank=False,
-                             default=0,
-                             validators=[MinValueValidator(0), MaxValueValidator(2)])
-    pram_count = IntegerField(null=False,
-                              blank=False,
-                              default=0,
-                              validators=[MinValueValidator(0), MaxValueValidator(4)])
-
-
 class Box(BaseFeedback):
     box_positions = CharField(null=False,
                               blank=False,
