@@ -4,6 +4,7 @@
 
 # Installation
 ```python manage.py migrate```
+Always rerun this after incoming changes.
 
 # Run Server
 ```python manage.py runserver```
