@@ -14,3 +14,4 @@ Always rerun this after incoming changes.
 [box](localhost:8000/api/box) <br>
 [changeover](localhost:8000/api/changeover) <br>
 [on-time](localhost:8000/api/on-time) <br>
+[user-credits](localhost:8000/api/user-credits) <br>
