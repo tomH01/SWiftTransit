@@ -19,8 +19,11 @@ class BoxPositions(models.TextChoices):
 
 
 class BaseFeedback(models.Model):
-    bus_line = IntegerField(null=False, blank=False)
-    time_stamp = models.DateTimeField(null=False, blank=False)
+    bus_line = IntegerField(null=True, blank=False, default=-1)
+    time_stamp = models.DateTimeField(null=True, blank=False, default=-1)
+
+    class Meta:
+        abstract = True
 
 
 class Occupancy(BaseFeedback):

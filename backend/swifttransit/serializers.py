@@ -14,6 +14,7 @@ class OccupancySerializer(serializers.HyperlinkedModelSerializer):
             instance.full_clean()
         except ValidationError as e:
             raise serializers.ValidationError(e.message_dict)
+        return data
 
 
 class BoxSerializer(serializers.HyperlinkedModelSerializer):
@@ -27,6 +28,7 @@ class BoxSerializer(serializers.HyperlinkedModelSerializer):
             instance.full_clean()
         except ValidationError as e:
             raise serializers.ValidationError(e.message_dict)
+        return data
 
 
 class ChangeoverSerializer(serializers.HyperlinkedModelSerializer):
@@ -40,6 +42,7 @@ class ChangeoverSerializer(serializers.HyperlinkedModelSerializer):
             instance.full_clean()
         except ValidationError as e:
             raise serializers.ValidationError(e.message_dict)
+        return data
 
 
 class OnTimeSerializer(serializers.HyperlinkedModelSerializer):
@@ -53,3 +56,4 @@ class OnTimeSerializer(serializers.HyperlinkedModelSerializer):
             instance.full_clean()
         except ValidationError as e:
             raise serializers.ValidationError(e.message_dict)
+        return data
