@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from swifttransit.models import Occupancy, Box, OnTime, Changeover
-from swifttransit.serializers import OccupancySerializer, BoxSerializer, OnTimeSerializer, ChangeoverSerializer
+from swifttransit.models import Occupancy, Box, OnTime, Changeover, BusLine
+from swifttransit.serializers import OccupancySerializer, BoxSerializer, OnTimeSerializer, ChangeoverSerializer, \
+    BusLineSerializer
+
+
+class BusLineViewSet(viewsets.ModelViewSet):
+    queryset = BusLine.objects.all()
+    serializer_class = BusLineSerializer
 
 
 class OccupancyViewSet(viewsets.ModelViewSet):

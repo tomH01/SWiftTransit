@@ -17,6 +17,11 @@ class BusLine(models.Model):
     line_number = IntegerField(null=True, blank=False, default=-1)
     direction = CharField(max_length=64)
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['line_number', 'direction'], name='line_direction')
+        ]
+
 
 class BaseFeedback(models.Model):
     bus_line = ForeignKey(BusLine,
