@@ -9,6 +9,9 @@ Always rerun this after incoming changes.
 # Run Server
 ```python manage.py runserver```
 
+# Dump Data
+```python manage.py loaddata data.json```
+
 # Access API
 [occupancy](http://localhost:8000/api/occupancy) <br>
 [box](http://localhost:8000/api/box) <br>
