@@ -1,7 +1,8 @@
 from django.core.exceptions import ValidationError
 from rest_framework import serializers
 
-from swifttransit.models import Occupancy, Box, Changeover, OnTime
+from swifttransit.models import Occupancy, Box, Changeover, OnTime, UserCredits
+
 
 class OccupancySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -52,6 +53,20 @@ class OnTimeSerializer(serializers.HyperlinkedModelSerializer):
 
     def validate(self, data):
         instance = OnTime(**data)
+        try:
+            instance.full_clean()
+        except ValidationError as e:
+            raise serializers.ValidationError(e.message_dict)
+        return data
+
+
+class UserCreditsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = UserCredits
+        fields = '__all__'
+
+    def validate(self, data):
+        instance = UserCredits(**data)
         try:
             instance.full_clean()
         except ValidationError as e:

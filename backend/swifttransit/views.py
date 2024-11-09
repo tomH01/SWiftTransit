@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from swifttransit.models import Occupancy, Box, OnTime, Changeover
-from swifttransit.serializers import OccupancySerializer, BoxSerializer, OnTimeSerializer, ChangeoverSerializer
+from swifttransit.models import Occupancy, Box, OnTime, Changeover, UserCredits
+from swifttransit.serializers import OccupancySerializer, BoxSerializer, OnTimeSerializer, ChangeoverSerializer, \
+    UserCreditsSerializer
 
 
 class OccupancyViewSet(viewsets.ModelViewSet):
@@ -23,3 +24,8 @@ class ChangeoverViewSet(viewsets.ModelViewSet):
 class OntimeViewSet(viewsets.ModelViewSet):
     queryset = OnTime.objects.all()
     serializer_class = OnTimeSerializer
+
+
+class UserCreditsViewSet(viewsets.ModelViewSet):
+    queryset = UserCredits.objects.all()
+    serializer_class = UserCreditsSerializer

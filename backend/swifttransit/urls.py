@@ -8,6 +8,7 @@ router.register(r'occupancy', views.OccupancyViewSet)
 router.register(r'box', views.BoxViewSet)
 router.register(r'changeover', views.ChangeoverViewSet)
 router.register(r'on-time', views.OntimeViewSet)
+router.register(r'user-credits', views.UserCreditsViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),

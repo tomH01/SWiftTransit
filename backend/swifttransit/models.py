@@ -61,3 +61,13 @@ class Changeover(BaseFeedback):
 class OnTime(BaseFeedback):
     on_time = BooleanField(default=True)
 
+
+class UserCredits(models.Model):
+    user_id = IntegerField(null=False,
+                           blank=False,
+                           default=0)
+    credits = IntegerField(null=False,
+                              blank=False,
+                              default=0,
+                              validators=[MinValueValidator(0)])
+
