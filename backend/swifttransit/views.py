@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.response import Response
 
-from swifttransit.models import Occupancy, Box, OnTime, Changeover, UserCredits
+from swifttransit.models import Occupancy, Box, OnTime, Changeover, UserCredits, Station
 from swifttransit.serializers import OccupancySerializer, BoxSerializer, OnTimeSerializer, ChangeoverSerializer, \
-    UserCreditsSerializer, BusLineSerializer
-from swifttransit.models import Occupancy, Box, OnTime, Changeover, BusLine
+    UserCreditsSerializer, BusLineSerializer, StationSerializer
 
 
 class BusLineViewSet(viewsets.ModelViewSet):
@@ -35,3 +36,17 @@ class OntimeViewSet(viewsets.ModelViewSet):
 class UserCreditsViewSet(viewsets.ModelViewSet):
     queryset = UserCredits.objects.all()
     serializer_class = UserCreditsSerializer
+
+
+class StationViewSet(viewsets.ModelViewSet):
+    queryset = Station.objects.all()
+    serializer_class = StationSerializer
+
+    @action(detail=False, methods=['get'])
+    def prefix_search(self, request):
+        prefix = request.query_params.get('prefix', '')
+        if prefix:
+            matches = Station.objects.filter(name__startswith=prefix)
+            serializer = StationSerializer(matches, many=True)
+            return Response(serializer.data)
+        return Response({"error": "Prefix parameter is required."}, status=400)

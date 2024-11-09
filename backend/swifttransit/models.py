@@ -23,6 +23,9 @@ class BusLine(models.Model):
         ]
 
 
+class Station(models.Model):
+    name = CharField(max_length=64)
+
 class BaseFeedback(models.Model):
     bus_line = ForeignKey(BusLine,
                           related_name='+',
@@ -65,6 +68,7 @@ class Changeover(BaseFeedback):
 
 class OnTime(BaseFeedback):
     on_time = BooleanField(default=True)
+
 
 
 class UserCredits(models.Model):

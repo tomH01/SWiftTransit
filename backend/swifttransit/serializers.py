@@ -1,7 +1,7 @@
 from django.core.exceptions import ValidationError
 from rest_framework import serializers
 
-from swifttransit.models import Occupancy, Box, Changeover, OnTime, UserCredits, BusLine
+from swifttransit.models import Occupancy, Box, Changeover, OnTime, UserCredits, BusLine, Station
 
 
 class BusLineSerializer(serializers.HyperlinkedModelSerializer):
@@ -16,6 +16,21 @@ class BusLineSerializer(serializers.HyperlinkedModelSerializer):
         except ValidationError as e:
             raise serializers.ValidationError(e)
         return data
+
+
+class StationSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Station
+        fields = '__all__'
+
+    def validate(self, data):
+        instance = Station(**data)
+        try:
+            instance.full_clean()
+        except ValidationError as e:
+            raise serializers.ValidationError(e)
+        return data
+
 
 class OccupancySerializer(serializers.HyperlinkedModelSerializer):
     bus_line = serializers.HyperlinkedRelatedField(
