@@ -18,7 +18,7 @@ class BusLineSerializer(serializers.HyperlinkedModelSerializer):
         return data
 
 
-class StationSerializer(serializers.HyperlinkedModelSerializer):
+class StationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Station
         fields = '__all__'

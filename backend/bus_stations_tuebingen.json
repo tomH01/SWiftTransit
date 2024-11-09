@@ -1,262 +1,1562 @@
 [
-    {"name": "Aeulestraße"},
-    {"name": "Ahornweg"},
-    {"name": "Aischbachstraße"},
-    {"name": "Aixer Straße"},
-    {"name": "Albrechtstraße"},
-    {"name": "Alexanderstraße"},
-    {"name": "Alter Güterbahnhof"},
-    {"name": "Am Mühlbach"},
-    {"name": "Ammergasse"},
-    {"name": "Amselweg"},
-    {"name": "Auf dem Kreuz"},
-    {"name": "Auf der Morgenstelle"},
-    {"name": "August-Bebel-Straße"},
-    {"name": "B.-v.Stuttner-Straße"},
-    {"name": "BG Unfallklinik"},
-    {"name": "Beethovenweg"},
-    {"name": "Bei den Römergräbern"},
-    {"name": "Bei der Kirche"},
-    {"name": "Benzstraße"},
-    {"name": "Bergfriedhof Ost"},
-    {"name": "Bergfriedhof Süd"},
-    {"name": "Bergfriedhof West"},
-    {"name": "Betriebshof TüBus"},
-    {"name": "Biererstraße"},
-    {"name": "Biesingerstraße"},
-    {"name": "Bismarckstraße"},
-    {"name": "Bismarckturm"},
-    {"name": "Bläsibad"},
-    {"name": "Blaue Brücke"},
-    {"name": "Botanischer Garten"},
-    {"name": "Breiter Weg"},
-    {"name": "Brückenstraße"},
-    {"name": "Brühlstraße"},
-    {"name": "Brunsstraße"},
-    {"name": "Bühl Rathaus"},
-    {"name": "Bühl Römerstraße"},
-    {"name": "Bürgeramt"},
-    {"name": "Burgholzweg"},
-    {"name": "Calwerstraße"},
-    {"name": "Carlo-Steeb-Str."},
-    {"name": "Corrensstraße"},
-    {"name": "Danziger Straße"},
-    {"name": "Deichelweg"},
-    {"name": "Derendingen Bahnhof"},
-    {"name": "Dieselstraße"},
-    {"name": "Doblerstraße"},
-    {"name": "Dorfackerschule"},
-    {"name": "Dorfstraße"},
-    {"name": "Düsseldorfer Straße"},
-    {"name": "Egeriaplatz"},
-    {"name": "Eichhaldenstraße"},
-    {"name": "Engelfriedshalde"},
-    {"name": "Erlenweg"},
-    {"name": "Ernst-Bloch-Straße"},
-    {"name": "Ernst-Simon-Straße"},
-    {"name": "Ersatzhaltestelle Aixer Straße"},
-    {"name": "Ersatzhaltestelle Hagelloch Rathaus"},
-    {"name": "Falkenweg"},
-    {"name": "Ferd.-Chr.-Baur-Str."},
-    {"name": "Feuerhägle Berufliche Schulen"},
-    {"name": "Feuerhägle"},
-    {"name": "Feuerhägle Städt. Schulen"},
-    {"name": "Fichtenweg"},
-    {"name": "Finanzamt"},
-    {"name": "Franz. Viertel"},
-    {"name": "Freibad"},
-    {"name": "Fried.-Zundel-Str."},
-    {"name": "Friedrich-Dannenmann-Straße"},
-    {"name": "Fritz-Bauer-Straße"},
-    {"name": "Frondsbergstraße"},
-    {"name": "Fuchsstraße"},
-    {"name": "Galgenberg"},
-    {"name": "Gartenstraße"},
-    {"name": "Gerstenmühlstraße"},
-    {"name": "Gmelinstraße"},
-    {"name": "Görlitzer Weg"},
-    {"name": "Gösstraße"},
-    {"name": "Goethestraße"},
-    {"name": "Gottfr.-Pressel-Weg"},
-    {"name": "Gottlieb-Olpp-Straße"},
-    {"name": "Gottlob-Braeuning-Straße"},
-    {"name": "Haagtor"},
-    {"name": "Hagelloch Dornäckerweg"},
-    {"name": "Hagelloch Rathaus"},
-    {"name": "Hagellocher Weg"},
-    {"name": "Hans-Geiger-Weg"},
-    {"name": "Hasenbühl"},
-    {"name": "Hauptbahnhof"},
-    {"name": "Hauptbahnhof Süd"},
-    {"name": "Haußerstraße"},
-    {"name": "Haydnweg"},
-    {"name": "Hechinger Eck"},
-    {"name": "Hechinger Straße"},
-    {"name": "Hegelstraße"},
-    {"name": "Heinlenstraße"},
-    {"name": "Hennentalweg"},
-    {"name": "Hermann-Hepper-Halle"},
-    {"name": "Herrenberger Straße"},
-    {"name": "Herrlesberg"},
-    {"name": "Hirschau Kirchplatz"},
-    {"name": "Hirschau Volksbank"},
-    {"name": "Hirschauer Straße"},
-    {"name": "Hölderlinstraße"},
-    {"name": "Horemer"},
-    {"name": "Hornstraße"},
-    {"name": "Hügelschule"},
-    {"name": "Hundskapfklinge"},
-    {"name": "Im Hopfengarten"},
-    {"name": "Im Rotbad"},
-    {"name": "Im Winkelrain"},
-    {"name": "Jürgensenstraße ERSATZ"},
-    {"name": "Jürgensenstraße"},
-    {"name": "Jugendherberge"},
-    {"name": "Käppele"},
-    {"name": "Käthe-Kollwitz-Str."},
-    {"name": "Kelternplatz"},
-    {"name": "Kielmeyerstraße"},
-    {"name": "Kiesäckerstraße"},
-    {"name": "Kilchberg Bahnhof"},
-    {"name": "Kilchberg Ehingenstraße"},
-    {"name": "Kilchberg Keltengrab"},
-    {"name": "Kilchberg Rathaus"},
-    {"name": "Kilchberg Schloß"},
-    {"name": "Kilchberg Schloß L370"},
-    {"name": "Kleiststraße"},
-    {"name": "Königsberger Straße"},
-    {"name": "Kreßbach Kleeacker"},
-    {"name": "Kreßbach Schloss"},
-    {"name": "Kreuzberg"},
-    {"name": "Kreuzstraße"},
-    {"name": "Krumme Brücke"},
-    {"name": "Kunsthalle"},
-    {"name": "Landestheater"},
-    {"name": "Landhausstraße"},
-    {"name": "Lichtenberger Weg"},
-    {"name": "Linsenbergstraße"},
-    {"name": "Loretto"},
-    {"name": "Lothar-Meyer-Bau"},
-    {"name": "Lustnau Bahnhof"},
-    {"name": "Maienfeldstraße"},
-    {"name": "Maria-von-Linden-Straße"},
-    {"name": "Marienstraße"},
-    {"name": "Max-Planck-Institute"},
-    {"name": "Memmingerstraße"},
-    {"name": "Mohlstraße"},
-    {"name": "Moltkestraße"},
-    {"name": "Mühlbachäcker"},
-    {"name": "Mühlenviertel"},
-    {"name": "Mühlstraße"},
-    {"name": "Neckarbrücke"},
-    {"name": "Neckarhalde"},
-    {"name": "Neckarsulmer Straße"},
-    {"name": "Nelkenweg"},
-    {"name": "Neuffenstraße"},
-    {"name": "Neuhalde"},
-    {"name": "Neuhaldenstraße ERSATZ"},
-    {"name": "Neuhaldenstraße"},
-    {"name": "Niethammerstraße"},
-    {"name": "Nonnenhaus"},
-    {"name": "Nürtinger Straße"},
-    {"name": "Öhlerweg"},
-    {"name": "Österberg"},
-    {"name": "Österbergstraße"},
-    {"name": "Oberndorf Feuersee"},
-    {"name": "Oberndorf Rottenburger Str."},
-    {"name": "Ochsenweide"},
-    {"name": "Pappelweg"},
-    {"name": "Parkhaus König"},
-    {"name": "Paul-Dietz-Straße"},
-    {"name": "Pauline-Krone-Heim"},
-    {"name": "Pfrondorf Hermann-Reuchlin-Straße"},
-    {"name": "Pfrondorf Lindenstraße"},
-    {"name": "Pfrondorf Lusstraße"},
-    {"name": "Pfrondorf Rathaus"},
-    {"name": "Pfrondorf Schönbuchhalle"},
-    {"name": "Pfrondorf Seestraße"},
-    {"name": "Pfrondorf Steinbruchstraße"},
-    {"name": "Pfrondorf Zollernstraße"},
-    {"name": "Poltringen Ammerbrücke"},
-    {"name": "Poststraße"},
-    {"name": "Quenstedtstraße"},
-    {"name": "Rappenberg"},
-    {"name": "Rappstraße"},
-    {"name": "Rechter Österberg"},
-    {"name": "Regierungspräsidium"},
-    {"name": "Rheinlandstraße"},
-    {"name": "Rittweg Ost"},
-    {"name": "Rittweg West"},
-    {"name": "Robert-Gradmann-Weg"},
-    {"name": "Rottenburg E.-Bolz-Platz"},
-    {"name": "Rottenburg Friedhof Sülchen"},
-    {"name": "Rottenburg Sülchenstraße"},
-    {"name": "Rümelinstraße"},
-    {"name": "Sand Drosselweg"},
-    {"name": "Sand Nordring"},
-    {"name": "Schaffhausenstraße"},
-    {"name": "Schleifmühleweg"},
-    {"name": "Schönblick"},
-    {"name": "Schwabstraße"},
-    {"name": "Schwärzl. Straße 111"},
-    {"name": "Schwärzl. Straße 45"},
-    {"name": "Schwärzl. Straße 79"},
-    {"name": "Schwärzlocher Täle"},
-    {"name": "Schweickhardtstraße"},
-    {"name": "Sindelfinger Straße (B296)"},
-    {"name": "Sindelfinger Straße"},
-    {"name": "Sophienpflege"},
-    {"name": "Sperberweg"},
-    {"name": "Stadtgraben"},
-    {"name": "Stadtwerke"},
-    {"name": "Städtischer Fuhrpark"},
-    {"name": "Stäudach"},
-    {"name": "Stauden"},
-    {"name": "Stauffenbergstraße"},
-    {"name": "Steige"},
-    {"name": "Stephanuskirche"},
-    {"name": "Sternplatz"},
-    {"name": "Sternwarte"},
-    {"name": "Straßburger Äcker"},
-    {"name": "Stuttgarter Straße"},
-    {"name": "Sudetenstraße"},
-    {"name": "Tilsiter Weg"},
-    {"name": "Tropenklinik"},
-    {"name": "Ulmenweg"},
-    {"name": "Uni / Neue Aula"},
-    {"name": "Uni-Kliniken Berg"},
-    {"name": "Uni-Kliniken Tal"},
-    {"name": "Untere Heulandsteige"},
-    {"name": "Unteres Burgholz"},
-    {"name": "Unterjesingen Kreissparkasse"},
-    {"name": "Unterjesingen Mitte"},
-    {"name": "Unterjesingen Sandäcker"},
-    {"name": "Unterjesingen Süd"},
-    {"name": "Ursrainer Ring"},
-    {"name": "Viktor-Renner-Straße"},
-    {"name": "Vor dem Kreuzberg"},
-    {"name": "Waldhäuser Straße"},
-    {"name": "Waldhörnle"},
-    {"name": "Waldhörnlestraße"},
-    {"name": "Wankheimer Täle"},
-    {"name": "Wanne Kunsthalle"},
-    {"name": "Weberstraße"},
-    {"name": "Weilerhalde"},
-    {"name": "Weilheim Alte Landstraße"},
-    {"name": "Weilheim Kneiple"},
-    {"name": "Weilheim Rathaus"},
-    {"name": "Weißdornweg"},
-    {"name": "Wendelsheim Adlerplatz"},
-    {"name": "Wendelsheim Schwabstraße"},
-    {"name": "Wennfelder Garten"},
-    {"name": "Westbahnhof"},
-    {"name": "Weststadt"},
-    {"name": "Wielandshöhe"},
-    {"name": "Wilhelmstraße"},
-    {"name": "Windfeldstraße"},
-    {"name": "Winkelwiese"},
-    {"name": "Wolfgang-Stock-Str."},
-    {"name": "Wolfsbaumweg"},
-    {"name": "Wurmlingen Lindenstr."},
-    {"name": "Wurmlingen Rössle"}
+    {
+        "fields": {
+            "name": "Aeulestraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ahornweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Aischbachstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Aixer Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Albrechtstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Alexanderstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Alter Güterbahnhof"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Am Mühlbach"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ammergasse"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Amselweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Auf dem Kreuz"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Auf der Morgenstelle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "August-Bebel-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "B.-v.Stuttner-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "BG Unfallklinik"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Beethovenweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bei den Römergräbern"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bei der Kirche"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Benzstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bergfriedhof Ost"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bergfriedhof Süd"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bergfriedhof West"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Betriebshof TüBus"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Biererstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Biesingerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bismarckstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bismarckturm"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bläsibad"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Blaue Brücke"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Botanischer Garten"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Breiter Weg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Brückenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Brühlstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Brunsstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bühl Rathaus"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bühl Römerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Bürgeramt"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Burgholzweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Calwerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Carlo-Steeb-Str."
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Corrensstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Danziger Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Deichelweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Derendingen Bahnhof"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Dieselstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Doblerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Dorfackerschule"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Dorfstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Düsseldorfer Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Egeriaplatz"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Eichhaldenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Engelfriedshalde"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Erlenweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ernst-Bloch-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ernst-Simon-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ersatzhaltestelle Aixer Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ersatzhaltestelle Hagelloch Rathaus"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Falkenweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ferd.-Chr.-Baur-Str."
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Feuerhägle Berufliche Schulen"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Feuerhägle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Feuerhägle Städt. Schulen"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Fichtenweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Finanzamt"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Franz. Viertel"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Freibad"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Fried.-Zundel-Str."
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Friedrich-Dannenmann-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Fritz-Bauer-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Frondsbergstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Fuchsstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Galgenberg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Gartenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Gerstenmühlstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Gmelinstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Görlitzer Weg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Gösstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Goethestraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Gottfr.-Pressel-Weg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Gottlieb-Olpp-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Gottlob-Braeuning-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Haagtor"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hagelloch Dornäckerweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hagelloch Rathaus"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hagellocher Weg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hans-Geiger-Weg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hasenbühl"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hauptbahnhof"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hauptbahnhof Süd"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Haußerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Haydnweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hechinger Eck"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hechinger Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hegelstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Heinlenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hennentalweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hermann-Hepper-Halle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Herrenberger Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Herrlesberg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hirschau Kirchplatz"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hirschau Volksbank"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hirschauer Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hölderlinstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Horemer"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hornstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hügelschule"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Hundskapfklinge"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Im Hopfengarten"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Im Rotbad"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Im Winkelrain"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Jürgensenstraße ERSATZ"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Jürgensenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Jugendherberge"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Käppele"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Käthe-Kollwitz-Str."
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kelternplatz"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kielmeyerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kiesäckerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kilchberg Bahnhof"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kilchberg Ehingenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kilchberg Keltengrab"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kilchberg Rathaus"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kilchberg Schloß"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kilchberg Schloß L370"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kleiststraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Königsberger Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kreßbach Kleeacker"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kreßbach Schloss"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kreuzberg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kreuzstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Krumme Brücke"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Kunsthalle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Landestheater"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Landhausstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Lichtenberger Weg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Linsenbergstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Loretto"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Lothar-Meyer-Bau"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Lustnau Bahnhof"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Maienfeldstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Maria-von-Linden-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Marienstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Max-Planck-Institute"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Memmingerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Mohlstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Moltkestraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Mühlbachäcker"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Mühlenviertel"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Mühlstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Neckarbrücke"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Neckarhalde"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Neckarsulmer Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Nelkenweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Neuffenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Neuhalde"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Neuhaldenstraße ERSATZ"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Neuhaldenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Niethammerstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Nonnenhaus"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Nürtinger Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Öhlerweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Österberg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Österbergstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Oberndorf Feuersee"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Oberndorf Rottenburger Str."
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ochsenweide"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pappelweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Parkhaus König"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Paul-Dietz-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pauline-Krone-Heim"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pfrondorf Hermann-Reuchlin-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pfrondorf Lindenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pfrondorf Lusstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pfrondorf Rathaus"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pfrondorf Schönbuchhalle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pfrondorf Seestraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pfrondorf Steinbruchstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Pfrondorf Zollernstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Poltringen Ammerbrücke"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Poststraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Quenstedtstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rappenberg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rappstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rechter Österberg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Regierungspräsidium"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rheinlandstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rittweg Ost"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rittweg West"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Robert-Gradmann-Weg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rottenburg E.-Bolz-Platz"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rottenburg Friedhof Sülchen"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rottenburg Sülchenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Rümelinstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sand Drosselweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sand Nordring"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schaffhausenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schleifmühleweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schönblick"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schwabstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schwärzl. Straße 111"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schwärzl. Straße 45"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schwärzl. Straße 79"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schwärzlocher Täle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Schweickhardtstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sindelfinger Straße (B296)"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sindelfinger Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sophienpflege"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sperberweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Stadtgraben"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Stadtwerke"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Städtischer Fuhrpark"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Stäudach"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Stauden"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Stauffenbergstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Steige"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Stephanuskirche"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sternplatz"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sternwarte"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Straßburger Äcker"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Stuttgarter Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Sudetenstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Tilsiter Weg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Tropenklinik"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ulmenweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Uni / Neue Aula"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Uni-Kliniken Berg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Uni-Kliniken Tal"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Untere Heulandsteige"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Unteres Burgholz"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Unterjesingen Kreissparkasse"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Unterjesingen Mitte"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Unterjesingen Sandäcker"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Unterjesingen Süd"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Ursrainer Ring"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Viktor-Renner-Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Vor dem Kreuzberg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Waldhäuser Straße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Waldhörnle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Waldhörnlestraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wankheimer Täle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wanne Kunsthalle"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Weberstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Weilerhalde"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Weilheim Alte Landstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Weilheim Kneiple"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Weilheim Rathaus"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Weißdornweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wendelsheim Adlerplatz"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wendelsheim Schwabstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wennfelder Garten"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Westbahnhof"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Weststadt"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wielandshöhe"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wilhelmstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Windfeldstraße"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Winkelwiese"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wolfgang-Stock-Str."
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wolfsbaumweg"
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wurmlingen Lindenstr."
+        },
+        "model": "swifttransit.Station"
+    },
+    {
+        "fields": {
+            "name": "Wurmlingen Rössle"
+        },
+        "model": "swifttransit.Station"
+    }
 ]

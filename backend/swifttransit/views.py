@@ -47,7 +47,8 @@ class StationViewSet(viewsets.ModelViewSet):
     def prefix_search(self, request):
         prefix = request.query_params.get('prefix', '')
         if prefix:
-            matches = Station.objects.filter(name__startswith=prefix)
+            limit = 10
+            matches = Station.objects.filter(name__startswith=prefix)[:limit]
             serializer = StationSerializer(matches, many=True)
             return Response(serializer.data)
         return Response({"error": "Prefix parameter is required."}, status=400)
