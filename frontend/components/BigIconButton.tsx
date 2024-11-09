@@ -1,5 +1,13 @@
 import { PropsWithChildren, ReactElement, useState } from "react";
-import { Text, Pressable, StyleSheet, View, Image, Button } from "react-native";
+import {
+  Text,
+  Pressable,
+  StyleSheet,
+  View,
+  Image,
+  Button,
+  TouchableHighlight,
+} from "react-native";
 
 export function BigIconButton({
   title,
@@ -13,7 +21,7 @@ export function BigIconButton({
   color?: string;
 }) {
   return (
-    <Pressable
+    <TouchableHighlight
       style={{
         backgroundColor: "white",
         shadowColor: "black",
@@ -25,6 +33,7 @@ export function BigIconButton({
         flexGrow: 1,
       }}
       onPress={onPress}
+      underlayColor={"#f0f0f0"}
     >
       <View
         style={[
@@ -48,7 +57,7 @@ export function BigIconButton({
           {title}
         </Text>
       </View>
-    </Pressable>
+    </TouchableHighlight>
   );
 }
 

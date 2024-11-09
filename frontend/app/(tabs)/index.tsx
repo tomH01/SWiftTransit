@@ -13,6 +13,7 @@ import { ThemedView } from "@/components/ThemedView";
 import { AccountShortView } from "@/components/AccountShortView";
 import { BigIconButton } from "@/components/BigIconButton";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import { router } from "expo-router";
 
 export default function HomeScreen() {
   return (
@@ -39,6 +40,10 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">SWiftTransit</ThemedText>
       </ThemedView>
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText type="subtitle">Plan Your Journey</ThemedText>
+      </ThemedView>
+
       <ThemedView
         style={[
           styles.stepContainer,
@@ -83,7 +88,7 @@ export default function HomeScreen() {
           title="Plan Your Journey"
           color=""
           onPress={() => {
-            console.log("Journey");
+            router.push("/routing");
           }}
           icon={<MaterialCommunityIcons name="map" size={56} color="black" />}
         ></BigIconButton>
