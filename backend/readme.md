@@ -18,3 +18,4 @@ Always rerun this after incoming changes.
 [changeover](http://localhost:8000/api/changeover) <br>
 [on-time](http://localhost:8000/api/on-time) <br>
 [user-credits](http://localhost:8000/api/user-credits) <br>
+[station/prefix_search](http://localhost:8000/api/station/prefix_search?prefix=am) <br>
