@@ -39,7 +39,7 @@ class BaseFeedback(models.Model):
 class Occupancy(BaseFeedback):
     occupancy_rating = CharField(null=False,
                           blank=False,
-                          choices = OccupancyChoices,
+                          choices = OccupancyChoices.choices,
                           default = 'Medium',
                           max_length=64)
 
