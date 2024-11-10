@@ -13,6 +13,7 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import UserContext from "@/hooks/useUserData";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { BackButton } from "@/components/BackButton";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -61,12 +62,7 @@ export default function RootLayout() {
                     }}
                     underlayColor={"transparent"}
                   >
-                    <Ionicons
-                      name="arrow-back"
-                      style={{ marginRight: 10 }}
-                      size={24}
-                      color="white"
-                    />
+                    <BackButton/>
                   </TouchableHighlight>
                 );
               },
@@ -87,12 +83,7 @@ export default function RootLayout() {
                     }}
                     underlayColor={"transparent"}
                   >
-                    <Ionicons
-                      name="arrow-back"
-                      style={{ marginRight: 10 }}
-                      size={24}
-                      color="white"
-                    />
+                    <BackButton/>
                   </TouchableHighlight>
                 );
               },
