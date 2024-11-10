@@ -21,13 +21,14 @@ export function BigIconButton({
   color?: string;
 }) {
   return (
+    // green red blue yellow green
     <TouchableHighlight
       style={{
         backgroundColor: "white",
-        shadowColor: "black",
         shadowOpacity: 0.2,
         shadowRadius: 8,
         shadowOffset: { width: 0, height: 2 },
+        elevation: 20,
         padding: 16,
         borderRadius: 16,
         flexGrow: 1,
