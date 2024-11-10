@@ -20,6 +20,7 @@ export function AccountShortView({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 1,
         borderRadius: 8,
+        elevation: 10
       }}
       onPress={onPress}
     >

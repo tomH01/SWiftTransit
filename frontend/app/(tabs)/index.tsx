@@ -47,9 +47,13 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">SWiftTransit</ThemedText>
+        <ThemedText 
+        style={{
+          fontWeight:"bold",
+        }}
+        type="title">SWiftTransit</ThemedText>
       </ThemedView>
-      <ThemedView style={styles.titleContainer}>
+      <ThemedView style={[styles.titleContainer, {alignSelf: "flex-start", marginLeft: 4}]}>
         <ThemedText type="subtitle">Plan Your Journey</ThemedText>
       </ThemedView>
 
@@ -94,7 +98,7 @@ export default function HomeScreen() {
           }
         ></BigIconButton>
         <BigIconButton
-          title="Plan Your Journey"
+          title="Routes"
           color="green"
           onPress={() => {
             router.push("/routing");
@@ -108,7 +112,7 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     gap: 8,
   },

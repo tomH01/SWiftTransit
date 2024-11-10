@@ -53,6 +53,7 @@ export function BigIconButton({
         <Text
           style={{
             fontSize: 20,
+            fontWeight: "bold"
           }}
         >
           {title}
