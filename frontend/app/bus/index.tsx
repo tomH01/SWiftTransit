@@ -196,6 +196,7 @@ export default function BusFeedback() {
           {/* empty array with 100 elements mapping */}
           {Array.from({ length: 100 }).map((_, index) => (
             <View
+              key={index}
               style={{
                 gap: 16,
                 shadowColor: "black",
