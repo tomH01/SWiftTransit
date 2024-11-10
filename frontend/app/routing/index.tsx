@@ -10,7 +10,9 @@ import {
   Switch,
   TouchableHighlight,
   Button,
+  ScrollView,
 } from "react-native";
+import OptionRoute from "@/components/routing/OptionRoute";
 
 export default function RoutePlan() {
   const [from, setFrom] = useState("");
@@ -44,7 +46,7 @@ export default function RoutePlan() {
               color="white"
             />
             <TextField
-              placeholder="from..."
+              placeholder="From..."
               value={from}
               onChangeText={setFrom}
               style={{
@@ -59,7 +61,7 @@ export default function RoutePlan() {
               color="white"
             />
             <TextField
-              placeholder="to..."
+              placeholder="To..."
               value={to}
               onChangeText={setTo}
               style={{
@@ -71,38 +73,131 @@ export default function RoutePlan() {
           <View
             style={{
               flexDirection: "row",
-              justifyContent: "flex-end",
+              // justifyContent: "flex-start",
               marginTop: 16,
             }}
           >
-            <TouchableHighlight
-              onPress={() => {}}
-              underlayColor={"transparent"}
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                flex: 1,
+              }}
             >
-              <View
-                style={{
-                  flexDirection: "row",
-                  gap: 8,
-                  alignItems: "center",
-                }}
+              <TouchableHighlight
+                onPress={() => {}}
+                underlayColor={"transparent"}
               >
-                <Text
+                <View
                   style={{
-                    color: "white",
-                    fontSize: 16,
-                    fontWeight: "bold",
+                    flexDirection: "row",
+                    gap: 8,
+                    alignItems: "center",
                   }}
                 >
-                  Filters
-                </Text>
-                <Ionicons name="options" size={24} color="white" />
-              </View>
-            </TouchableHighlight>
+                  <Ionicons name="options" size={28} color="white" />
+                  <Text
+                    style={{
+                      color: "white",
+                      fontSize: 16,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Filters
+                  </Text>
+                </View>
+              </TouchableHighlight>
+            </View>
+            {/* {SEARCH BUTTON} */}
+            <View
+              style={{
+                flexDirection: "row",
+              }}
+            >
+              <TouchableHighlight
+                onPress={() => {}}
+                underlayColor={"transparent"}
+              >
+                <View
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center",
+                    borderRadius: 20,
+                    paddingHorizontal: 32,
+                    paddingVertical: 2,
+                    backgroundColor: "#8BB88B",
+                    justifyContent: "center",
+                  }}
+                >
+                  {/* <Text
+                    style={{
+                      color: "white",
+                      fontSize: 16,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    
+                  </Text> */}
+                  <Ionicons name="search" size={28} color="#006400" />
+                </View>
+              </TouchableHighlight>
+            </View>
           </View>
         </View>
         {/* Results */}
         <View></View>
       </View>
+      <ScrollView style={{}}>
+        <OptionRoute
+          startTime="8:45"
+          endTime="9:03"
+          difference="18"
+          busNumbers={["8", "4"]}
+          delay="+3"
+        />
+        <OptionRoute
+          startTime="8:45"
+          endTime="9:03"
+          difference="18"
+          busNumbers={["8", "10"]}
+          delay="+7"
+        />
+        <OptionRoute
+          startTime="8:45"
+          endTime="9:03"
+          difference="18"
+          busNumbers={["8", "10"]}
+          delay="+7"
+        />
+        <OptionRoute
+          startTime="8:45"
+          endTime="9:03"
+          difference="18"
+          busNumbers={["8", "10"]}
+          delay="+7"
+        />
+        <OptionRoute
+          startTime="8:45"
+          endTime="9:03"
+          difference="18"
+          busNumbers={["8", "10"]}
+          delay="+7"
+        />
+        <OptionRoute
+          startTime="8:45"
+          endTime="9:03"
+          difference="18"
+          busNumbers={["8", "10"]}
+          delay="+7"
+        />
+        <OptionRoute
+          startTime="8:45"
+          endTime="9:03"
+          difference="18"
+          busNumbers={["8", "10"]}
+          delay="+7"
+        />
+      </ScrollView>
     </SafeAreaView>
   );
 }

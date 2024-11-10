@@ -8,8 +8,9 @@ import { router, Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
-import { Button, Text } from "react-native";
+import { Button, Text, TouchableHighlight } from "react-native";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -44,13 +45,14 @@ export default function RootLayout() {
             headerBackTitleVisible: false,
             headerLeft: (props) => {
               return (
-                <Button
-                  title="◀"
-                  color={"white"}
+                <TouchableHighlight
                   onPress={() => {
                     router.dismiss();
                   }}
-                ></Button>
+                  underlayColor={"transparent"}
+                >
+                  <Ionicons name="arrow-back" style={{marginRight:10}} size={24} color="white" />
+                </TouchableHighlight>
               );
             },
           }}
