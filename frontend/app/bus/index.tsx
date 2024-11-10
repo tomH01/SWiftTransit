@@ -192,19 +192,79 @@ export default function BusFeedback() {
               : "Detecting Bus..."}
           </Text>
         </View>
-        {/* Feedback */}
-        <ScrollView>
-          <View>
+        <ScrollView style={{}}>
+          {/* empty array with 100 elements mapping */}
+          {Array.from({ length: 100 }).map((_, index) => (
             <View
               style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
+                gap: 16,
+                shadowColor: "black",
+                backgroundColor: "#f0f0f0",
+                borderRadius: 16,
+                padding: 16,
+                marginBottom: 16,
               }}
             >
-              <Text>Question</Text>
-              <Text></Text>
+              {/* Question */}
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: 20,
+                    fontWeight: "bold",
+                  }}
+                >
+                  How occupied is the bus?
+                </Text>
+                <View
+                  style={{
+                    backgroundColor: "gold",
+                    padding: 8,
+                    borderRadius: 100,
+                    width: 32,
+                    height: 32,
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Text>{Math.floor(Math.random() * 20) + 1}</Text>
+                </View>
+              </View>
+              <Text>Select Below:</Text>
+              {/* Multiple Choice */}
+              <View>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    gap: 8,
+                  }}
+                >
+                  {["Empty", "Half", "Full"].map((choice) => (
+                    <TouchableHighlight
+                      style={{
+                        backgroundColor: "white",
+                        padding: 8,
+                        borderRadius: 8,
+                        flexGrow: 1,
+                        alignItems: "center",
+                      }}
+                      onPress={() => {
+                        console.log(choice);
+                      }}
+                      underlayColor={"#f0f0f0"}
+                    >
+                      <Text>{choice}</Text>
+                    </TouchableHighlight>
+                  ))}
+                </View>
+              </View>
             </View>
-          </View>
+          ))}
         </ScrollView>
       </View>
     </SafeAreaView>
