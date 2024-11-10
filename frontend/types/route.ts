@@ -7,7 +7,7 @@ export default interface Route {
   arrival_delay: number;
   departure_actual: string;
   arrival_actual: string;
-  bicycle: boolean;
+  bicycle: number;
   occupancy: number;
   departure_stop: string;
   arrival_stop: string;

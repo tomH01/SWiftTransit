@@ -69,27 +69,29 @@ export default function OptionRoute({
             >
               {data[0].departure} - {data[data.length - 1].arrival}
             </Text>
-            <View style={{ flexDirection: "row" }}>
-              <Text
-                style={{
-                  alignSelf: "flex-start",
-                  color: data[0].departure_delay > 5 ? "red" : "green",
-                  marginLeft: 28,
-                  fontWeight: "bold",
-                }}
-              >
-                +{data[0].departure_delay}
-              </Text>
-              <Text
-                style={{
-                  marginLeft: 28,
-                  fontWeight: "bold",
-                  color: "gray",
-                }}
-              >
-                Est: {data[data.length - 1].arrival_actual}
-              </Text>
-            </View>
+            {data[0].departure_delay != -1 ? (
+              <View style={{ flexDirection: "row" }}>
+                <Text
+                  style={{
+                    alignSelf: "flex-start",
+                    color: data[0].departure_delay > 5 ? "red" : "green",
+                    marginLeft: 28,
+                    fontWeight: "bold",
+                  }}
+                >
+                  +{data[0].departure_delay}
+                </Text>
+                <Text
+                  style={{
+                    marginLeft: 28,
+                    fontWeight: "bold",
+                    color: "gray",
+                  }}
+                >
+                  Est: {data[data.length - 1].arrival_actual}
+                </Text>
+              </View>
+            ) : null}
           </View>
         </View>
         <View>
@@ -117,18 +119,26 @@ export default function OptionRoute({
               <Ionicons name="person-sharp" size={20} color="#34A853" />
             ) : data[0].occupancy == 1 ? (
               <Ionicons name="people" size={20} color="#FBBC05" />
-            ) : (
+            ) : data[0].occupancy == 2 ? (
               <MaterialCommunityIcons
                 name="account-group"
                 size={20}
                 color="#EA4335"
               />
+            ) : (
+              <Ionicons name="people" size={20} color="gray" />
             )}
 
             <MaterialCommunityIcons
               name="bicycle"
               size={20}
-              color={data[0].bicycle ? "#34A853" : "#EA4335"}
+              color={
+                data[0].bicycle == 1
+                  ? "#34A853"
+                  : data[0].bicycle == 0
+                  ? "#EA4335"
+                  : "gray"
+              }
             />
           </View>
         </View>
