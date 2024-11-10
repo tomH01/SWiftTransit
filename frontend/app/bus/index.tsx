@@ -11,23 +11,62 @@ import {
   Switch,
   TouchableHighlight,
   Button,
-  ScrollView,
+  TouchableOpacity,
   ActivityIndicator,
+  FlatList,
+  LayoutAnimation,
 } from "react-native";
 import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
 import LevelBadge from "@/components/LevelBadge";
 import { ProgressBar } from "@/components/ProgressBar";
 import UserContext from "@/hooks/useUserData";
+import React from "react";
 
 interface BusData {
   busNumber: string;
   station: string;
 }
 
+interface Questions {
+  id: string;
+  question: string;
+  answers: string[];
+  points: number;
+  type?: "multiple" | "single";
+}
+
+const sampleQuestions: Questions[] = [
+  {
+    id: "1",
+    question: "How full is your bus?",
+    answers: ["Empty", "Medium", "Full"],
+    points: 12,
+  },
+  {
+    id: "2",
+    question: "How many bikes are on board?",
+    answers: ["0", "1", "2"],
+    points: 14,
+  },
+  {
+    id: "3",
+    question: "Is there a wheelchair/stroller on board?",
+    answers: ["Yes", "No"],
+    points: 10,
+  },
+  {
+    id: "4",
+    question: "Do you expect delays?",
+    answers: ["Yes", "No"],
+    points: 10,
+  },
+];
+
 export default function BusFeedback() {
   const [busData, setBusData] = useState<BusData | undefined>(undefined);
   const { user, setUser } = useContext(UserContext);
+  const [questions, setQuestions] = useState<Questions[]>(sampleQuestions);
+
   const challengeProgresses = useMemo(() => {
     return {
       daily: Math.random(),
@@ -36,14 +75,17 @@ export default function BusFeedback() {
     };
   }, []);
   useEffect(() => {
-    const busses = ["2", "3", "4", "5"];
+    const busses = [
+      // "2", "3", "4", "5"
+      "8",
+    ];
     const stations = [
-      "HölderlinStraße",
-      "Hauptbahnhof",
-      "Fichtenweg",
-      "Wilhelmstraße",
+      // "HölderlinStraße",
+      // "Hauptbahnhof",
+      // "Fichtenweg",
+      // "Wilhelmstraße",
       "Neckarbrücke",
-      "Nonnenhaus",
+      // "Nonnenhaus",
     ];
     setTimeout(() => {
       setBusData({
@@ -56,13 +98,13 @@ export default function BusFeedback() {
     <SafeAreaView
       style={{
         backgroundColor: "white",
-        height: "100%",
       }}
     >
       <View
         style={{
           padding: 16,
           gap: 24,
+          height: "100%",
         }}
       >
         <ThemedText type="title">
@@ -109,7 +151,7 @@ export default function BusFeedback() {
               <ProgressBar
                 progress={Math.max(0.2, challengeProgresses.daily)}
                 backgroundColor="white"
-                color="#c00d0d"
+                color="#ea4335"
                 height={12}
                 style={{ width: "50%" }}
               />
@@ -132,7 +174,7 @@ export default function BusFeedback() {
               <ProgressBar
                 progress={Math.max(0.2, challengeProgresses.weekly)}
                 backgroundColor="white"
-                color="#c00d0d"
+                color="#ea4335"
                 height={12}
                 style={{ width: "50%" }}
               />
@@ -155,7 +197,7 @@ export default function BusFeedback() {
               <ProgressBar
                 progress={Math.max(0.2, challengeProgresses.seasonal)}
                 backgroundColor="white"
-                color="#c00d0d"
+                color="#ea4335"
                 height={12}
                 style={{ width: "50%" }}
               />
@@ -172,7 +214,7 @@ export default function BusFeedback() {
         <View
           style={{
             width: "100%",
-            backgroundColor: "#c00d0d",
+            backgroundColor: "#ea4335",
             padding: 8,
             borderRadius: 8,
             flexDirection: "row",
@@ -192,84 +234,171 @@ export default function BusFeedback() {
               : "Detecting Bus..."}
           </Text>
         </View>
-        <ScrollView style={{}}>
-          {/* empty array with 100 elements mapping */}
-          {Array.from({ length: 100 }).map((_, index) => (
-            <View
-              key={index}
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <ThemedText type="subtitle">Feedbacks</ThemedText>
+
+          <TouchableOpacity
+            style={{
+              backgroundColor: "#ea4335",
+              borderRadius: 8,
+            }}
+          >
+            <Text
               style={{
-                gap: 16,
-                shadowColor: "black",
-                backgroundColor: "#f0f0f0",
-                borderRadius: 16,
-                padding: 16,
-                marginBottom: 16,
+                color: "white",
+                padding: 8,
+                fontWeight: "bold",
+                fontSize: 16,
               }}
             >
-              {/* Question */}
-              <View
-                style={{
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <Text
-                  style={{
-                    fontSize: 20,
-                    fontWeight: "bold",
+              Report Harrasmenet
+            </Text>
+          </TouchableOpacity>
+        </View>
+        {questions.length > 0 ? (
+          <FlatList
+            data={questions}
+            renderItem={({ item }) => {
+              return (
+                <Question
+                  key={item.question}
+                  question={item}
+                  onChoice={(choice) => {
+                    let newQuestions = questions.filter(
+                      (q) => q.id !== item.id
+                    );
+                    setQuestions(newQuestions);
+                    LayoutAnimation.configureNext(layoutAnimConfig);
+                    setUser({ ...user, points: user.points + item.points });
                   }}
-                >
-                  How occupied is the bus?
-                </Text>
-                <View
-                  style={{
-                    backgroundColor: "gold",
-                    padding: 8,
-                    borderRadius: 100,
-                    width: 32,
-                    height: 32,
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Text>{Math.floor(Math.random() * 20) + 1}</Text>
-                </View>
-              </View>
-              <Text>Select Below:</Text>
-              {/* Multiple Choice */}
-              <View>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    gap: 8,
-                  }}
-                >
-                  {["Empty", "Half", "Full"].map((choice) => (
-                    <TouchableHighlight
-                      style={{
-                        backgroundColor: "white",
-                        padding: 8,
-                        borderRadius: 8,
-                        flexGrow: 1,
-                        alignItems: "center",
-                      }}
-                      onPress={() => {
-                        console.log(choice);
-                      }}
-                      underlayColor={"#f0f0f0"}
-                    >
-                      <Text>{choice}</Text>
-                    </TouchableHighlight>
-                  ))}
-                </View>
-              </View>
-            </View>
-          ))}
-        </ScrollView>
+                />
+              );
+            }}
+            keyExtractor={(item) => item.id}
+            scrollEnabled={true}
+          />
+        ) : (
+          <Text>No more questions!</Text>
+        )}
       </View>
     </SafeAreaView>
   );
 }
 
+function Question({
+  question,
+  onChoice,
+}: {
+  question: Questions;
+  onChoice?: (choice: string) => void;
+}) {
+  const [text, setText] = useState("");
+  return (
+    <View
+      style={{
+        gap: 16,
+        shadowColor: "black",
+        backgroundColor: "#f0f0f0",
+        borderRadius: 16,
+        padding: 16,
+        marginBottom: 16,
+      }}
+    >
+      {/* Question */}
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "bold",
+            // text wrap
+            flexShrink: 1,
+          }}
+        >
+          {question.question}
+        </Text>
+        <View
+          style={{
+            backgroundColor: "gold",
+            padding: 8,
+            borderRadius: 100,
+            width: 32,
+            height: 32,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text>{question.points}</Text>
+        </View>
+      </View>
+      <Text>Select Below:</Text>
+      {/* Multiple Choice */}
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            gap: 8,
+          }}
+        >
+          {question.type === "single" ? (
+            <>
+              <TextField
+                placeholder="Type here..."
+                value={text}
+                onChangeText={setText}
+                focusable={true}
+                style={{
+                  flexGrow: 1,
+                }}
+              />
+              <Button title="Submit" onPress={() => onChoice?.("Yes")}></Button>
+            </>
+          ) : (
+            question.answers.map((choice) => (
+              <TouchableHighlight
+                key={choice}
+                style={{
+                  backgroundColor: "white",
+                  padding: 8,
+                  borderRadius: 8,
+                  flexGrow: 1,
+                  alignItems: "center",
+                }}
+                onPress={() => {
+                  onChoice?.(choice);
+                }}
+                underlayColor={"#f0f0f0"}
+              >
+                <Text>{choice}</Text>
+              </TouchableHighlight>
+            ))
+          )}
+        </View>
+      </View>
+    </View>
+  );
+}
+
 const style = StyleSheet.create({});
+const layoutAnimConfig = {
+  duration: 600,
+  update: {
+    type: LayoutAnimation.Types.easeInEaseOut,
+  },
+  delete: {
+    duration: 600,
+    type: LayoutAnimation.Types.easeInEaseOut,
+    property: LayoutAnimation.Properties.opacity,
+  },
+};

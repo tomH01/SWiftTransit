@@ -76,7 +76,7 @@ export default function RootLayout() {
             name="bus/index"
             options={{
               headerTitle: "TüBus Feedback",
-              headerStyle: { backgroundColor: "#c00d0d" },
+              headerStyle: { backgroundColor: "#ea4335" },
               headerTitleStyle: { color: "white" },
               headerBackTitleVisible: false,
               headerLeft: (props) => {
@@ -109,8 +109,14 @@ export default function RootLayout() {
                         alignItems: "center",
                       }}
                     >
-                      <FontAwesome6 name="coins" size={16} color="black" />
-                      <Text style={{ color: "black", padding: 8 }}>
+                      <FontAwesome6 name="coins" size={16} color="#ea4335" />
+                      <Text
+                        style={{
+                          color: "#ea4335",
+                          padding: 8,
+                          fontWeight: "bold",
+                        }}
+                      >
                         {user.points}
                       </Text>
                     </View>
