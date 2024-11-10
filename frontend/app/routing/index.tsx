@@ -152,8 +152,11 @@ export default function RoutePlan() {
           startTime="8:45"
           endTime="9:03"
           difference="18"
-          busNumbers={["8", "4"]}
+          busNumbers={["8", "10"]}
           delay="+3"
+          bike={true}
+          fullness={1}
+          actual_arrival="9:06"
         />
         <OptionRoute
           startTime="8:45"
@@ -161,6 +164,9 @@ export default function RoutePlan() {
           difference="18"
           busNumbers={["8", "10"]}
           delay="+7"
+          bike={false}
+          fullness={1}
+          actual_arrival="9:10"
         />
         <OptionRoute
           startTime="8:45"
@@ -168,6 +174,9 @@ export default function RoutePlan() {
           difference="18"
           busNumbers={["8", "10"]}
           delay="+7"
+          bike={true}
+          fullness={1}
+          actual_arrival="9:10"
         />
         <OptionRoute
           startTime="8:45"
@@ -175,6 +184,9 @@ export default function RoutePlan() {
           difference="18"
           busNumbers={["8", "10"]}
           delay="+7"
+          bike={true}
+          fullness={1}
+          actual_arrival="9:10"
         />
         <OptionRoute
           startTime="8:45"
@@ -182,6 +194,9 @@ export default function RoutePlan() {
           difference="18"
           busNumbers={["8", "10"]}
           delay="+7"
+          bike={true}
+          fullness={0}
+          actual_arrival="9:10"
         />
         <OptionRoute
           startTime="8:45"
@@ -189,6 +204,9 @@ export default function RoutePlan() {
           difference="18"
           busNumbers={["8", "10"]}
           delay="+7"
+          bike={true}
+          fullness={1}
+          actual_arrival="9:10"
         />
         <OptionRoute
           startTime="8:45"
@@ -196,6 +214,9 @@ export default function RoutePlan() {
           difference="18"
           busNumbers={["8", "10"]}
           delay="+7"
+          bike={false}
+          fullness={2}
+          actual_arrival="9:10"
         />
       </ScrollView>
     </SafeAreaView>
