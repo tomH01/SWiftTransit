@@ -54,7 +54,7 @@ class StationViewSet(viewsets.ModelViewSet):
         return Response({"error": "Prefix parameter is required."}, status=400)
 
 
-class Routes(APIView):
+class RoutesBoris(APIView):
     def get(self, request):
         routes = [
             [
@@ -64,7 +64,11 @@ class Routes(APIView):
                     'departure': '7:21',
                     'arrival': '7:25',
                     'departure_delay': 3,
-                    'arrival_delay': 4
+                    'arrival_delay': 4,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
                 },
                 {
                     'name': 8,
@@ -72,7 +76,11 @@ class Routes(APIView):
                     'departure': '7:32',
                     'arrival': '7:52',
                     'departure_delay': 2,
-                    'arrival_delay': 1
+                    'arrival_delay': 1,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
                 }
             ],
             [
@@ -82,7 +90,11 @@ class Routes(APIView):
                     'departure': '7:51',
                     'arrival': '7:55',
                     'departure_delay': 2,
-                    'arrival_delay': 2
+                    'arrival_delay': 2,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
                 },
                 {
                     'name': 8,
@@ -90,7 +102,11 @@ class Routes(APIView):
                     'departure': '7:32',
                     'arrival': '7:52',
                     'departure_delay': 3,
-                    'arrival_delay': 1
+                    'arrival_delay': 1,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
                 }
             ],
             [
@@ -100,7 +116,11 @@ class Routes(APIView):
                     'departure': '8:21',
                     'arrival': '8:25',
                     'departure_delay': 5,
-                    'arrival_delay': 4
+                    'arrival_delay': 4,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
                 },
                 {
                     'name': 8,
@@ -108,7 +128,96 @@ class Routes(APIView):
                     'departure': '8:32',
                     'arrival': '8:52',
                     'departure_delay': 3,
-                    'arrival_delay': 3
+                    'arrival_delay': 3,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
+                }
+            ],
+        ]
+        return Response(routes)
+
+
+class RoutesChristiane(APIView):
+    def get(self, request):
+        routes = [
+            [
+                {
+                    'name': 10,
+                    'type': 'bus',
+                    'departure': '7:21',
+                    'arrival': '7:25',
+                    'departure_delay': 3,
+                    'arrival_delay': 4,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
+                },
+                {
+                    'name': 8,
+                    'type': 'bus',
+                    'departure': '7:32',
+                    'arrival': '7:52',
+                    'departure_delay': 2,
+                    'arrival_delay': 1,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
+                }
+            ],
+            [
+                {
+                    'name': 10,
+                    'type': 'bus',
+                    'departure': '7:51',
+                    'arrival': '7:55',
+                    'departure_delay': 2,
+                    'arrival_delay': 2,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
+                },
+                {
+                    'name': 8,
+                    'type': 'bus',
+                    'departure': '7:32',
+                    'arrival': '7:52',
+                    'departure_delay': 3,
+                    'arrival_delay': 1,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
+                }
+            ],
+            [
+                {
+                    'name': 10,
+                    'type': 'bus',
+                    'departure': '8:21',
+                    'arrival': '8:25',
+                    'departure_delay': 5,
+                    'arrival_delay': 4,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
+                },
+                {
+                    'name': 8,
+                    'type': 'bus',
+                    'departure': '8:32',
+                    'arrival': '8:52',
+                    'departure_delay': 3,
+                    'arrival_delay': 3,
+                    'departure_actual': '7:21',
+                    'arrival_actual': '7:25',
+                    'bicycle': True,
+                    'occupancy': 1
                 }
             ],
         ]
