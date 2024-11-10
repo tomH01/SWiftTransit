@@ -1,6 +1,6 @@
 import TextField from "@/components/routing/TextField";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
+import ConfettiCannon from "react-native-confetti-cannon";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useContext, useEffect, useMemo, useState } from "react";
 import {
@@ -241,7 +241,7 @@ export default function BusFeedback() {
             alignItems: "center",
           }}
         >
-          <ThemedText type="subtitle">Feedbacks</ThemedText>
+          <ThemedText type="subtitle">Feedback</ThemedText>
 
           <TouchableOpacity
             style={{
@@ -284,7 +284,15 @@ export default function BusFeedback() {
             scrollEnabled={true}
           />
         ) : (
-          <Text>No more questions!</Text>
+          <>
+            <Text>No more questions!</Text>
+            <ConfettiCannon
+              count={200}
+              origin={{ x: -10, y: 0 }}
+              fadeOut={true}
+              fallSpeed={500}
+            />
+          </>
         )}
       </View>
     </SafeAreaView>

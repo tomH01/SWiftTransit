@@ -27,8 +27,8 @@ export default function OptionRoute({
       style={[
         {
           flexDirection: "column",
-          padding: 10,
-          gap: 8,
+          padding: 16,
+          gap: 16,
           alignItems: "center",
           marginVertical: 5,
           marginHorizontal: 10,
@@ -43,6 +43,7 @@ export default function OptionRoute({
         style={[
           {
             flexDirection: "row",
+            justifyContent: "space-between",
           },
         ]}
       >
@@ -55,6 +56,7 @@ export default function OptionRoute({
           <View
             style={{
               flexDirection: "column",
+              gap: 4,
             }}
           >
             <Text
@@ -75,7 +77,7 @@ export default function OptionRoute({
                   style={{
                     alignSelf: "flex-start",
                     color: data[0].departure_delay > 5 ? "red" : "green",
-                    marginLeft: 28,
+                    marginLeft: 4,
                     fontWeight: "bold",
                   }}
                 >
@@ -83,7 +85,7 @@ export default function OptionRoute({
                 </Text>
                 <Text
                   style={{
-                    marginLeft: 28,
+                    marginLeft: 36,
                     fontWeight: "bold",
                     color: "gray",
                   }}
@@ -111,7 +113,7 @@ export default function OptionRoute({
               flexDirection: "row",
               justifyContent: "flex-end",
               flex: 1,
-              marginRight: 20,
+
               gap: 8,
             }}
           >
@@ -163,9 +165,10 @@ export default function OptionRoute({
               alignItems: "center",
               borderRadius: 10,
               padding: 4,
+              gap: 12,
             }}
           >
-            <FontAwesome name="bus" size={24} color="white" />
+            <FontAwesome name="bus" size={20} color="white" />
             <Text style={[style.text, { color: "white" }]}>{route.name}</Text>
           </View>
         ))}
@@ -198,7 +201,6 @@ const style = StyleSheet.create({
   text: {
     fontSize: 20,
     fontWeight: "bold",
-    marginHorizontal: 15,
   },
 });
 
