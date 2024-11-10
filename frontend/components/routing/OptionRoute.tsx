@@ -15,25 +15,12 @@ import {
 import ParallaxScrollView from "../ParallaxScrollView";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+import Route from "@/types/route";
 
 export default function OptionRoute({
-  startTime,
-  endTime,
-  difference,
-  busNumbers,
-  delay,
-  fullness,
-  bike,
-  actual_arrival,
+  data,
 }: ViewProps & {
-  busNumbers: string[];
-  startTime: string;
-  endTime: string;
-  difference: string;
-  delay: string;
-  fullness: number;
-  bike: boolean;
-  actual_arrival: string;
+  data: Route[];
 }) {
   return (
     <Pressable
@@ -80,27 +67,27 @@ export default function OptionRoute({
                 },
               ]}
             >
-              {startTime} - {endTime}
+              {data[0].departure} - {data[data.length - 1].arrival}
             </Text>
-            <View style={{ flexDirection: "row"}}>
+            <View style={{ flexDirection: "row" }}>
               <Text
                 style={{
                   alignSelf: "flex-start",
-                  color: parseInt(delay) > 5 ? "red" : "green",
+                  color: data[0].departure_delay > 5 ? "red" : "green",
                   marginLeft: 28,
                   fontWeight: "bold",
                 }}
               >
-                {delay}
+                +{data[0].departure_delay}
               </Text>
               <Text
-              style={{
-                marginLeft: 28,
-                fontWeight: "bold",
-                color: "gray"
-              }}
+                style={{
+                  marginLeft: 28,
+                  fontWeight: "bold",
+                  color: "gray",
+                }}
               >
-                Est: {actual_arrival}
+                Est: {data[data.length - 1].arrival_actual}
               </Text>
             </View>
           </View>
@@ -113,7 +100,9 @@ export default function OptionRoute({
               flex: 1,
             }}
           >
-            <Text style={[style.text, {}]}>{difference} min</Text>
+            <Text style={[style.text, {}]}>
+              {Math.floor(Math.random() * 30) + 10} min
+            </Text>
           </View>
           <View
             style={{
@@ -124,9 +113,9 @@ export default function OptionRoute({
               gap: 8,
             }}
           >
-            {fullness == 0 ? (
+            {data[0].occupancy == 0 ? (
               <Ionicons name="person-sharp" size={20} color="#34A853" />
-            ) : fullness == 1 ? (
+            ) : data[0].occupancy == 1 ? (
               <Ionicons name="people" size={20} color="#FBBC05" />
             ) : (
               <MaterialCommunityIcons
@@ -139,7 +128,7 @@ export default function OptionRoute({
             <MaterialCommunityIcons
               name="bicycle"
               size={20}
-              color={bike ? "#34A853" : "#EA4335"}
+              color={data[0].bicycle ? "#34A853" : "#EA4335"}
             />
           </View>
         </View>
@@ -149,24 +138,29 @@ export default function OptionRoute({
         style={[
           {
             flexDirection: "row",
+            gap: 8,
           },
         ]}
       >
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            flex: 2,
-            backgroundColor: getBusColor(busNumbers[0]),
-            alignItems: "center",
-            borderRadius: 10,
-            padding: 4,
-          }}
-        >
-          <FontAwesome name="bus" size={24} color="white" />
-          <Text style={[style.text, { color: "white" }]}>{busNumbers[0]}</Text>
-        </View>
-        <View
+        {data.map((route, index) => (
+          <View
+            key={index}
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              flex: 2,
+              backgroundColor: getBusColor(route.name.toString()),
+              alignItems: "center",
+              borderRadius: 10,
+              padding: 4,
+            }}
+          >
+            <FontAwesome name="bus" size={24} color="white" />
+            <Text style={[style.text, { color: "white" }]}>{route.name}</Text>
+          </View>
+        ))}
+
+        {/* <View
           style={{
             flexDirection: "row",
             justifyContent: "center",
@@ -174,20 +168,7 @@ export default function OptionRoute({
           }}
         >
           <FontAwesome5 name="walking" size={24} color="black" />
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            flex: 2,
-            backgroundColor: getBusColor(busNumbers[1]),
-            borderRadius: 10,
-            padding: 4,
-          }}
-        >
-          <FontAwesome name="bus" size={24} color="white" />
-          <Text style={[style.text, { color: "white" }]}>{busNumbers[1]}</Text>
-        </View>
+        </View> */}
       </View>
     </Pressable>
   );

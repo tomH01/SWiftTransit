@@ -1,23 +1,25 @@
 import TextField from "@/components/routing/TextField";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   SafeAreaView,
   Text,
   View,
   StyleSheet,
-  Switch,
   TouchableHighlight,
-  Button,
   ScrollView,
+  FlatList,
 } from "react-native";
 import OptionRoute from "@/components/routing/OptionRoute";
+import Route from "@/types/route";
+import UserContext from "@/hooks/useUserData";
 
 export default function RoutePlan() {
+  const { user } = useContext(UserContext);
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-  const [bike, setBike] = useState(false);
+  const [data, setData] = useState<Route[][]>([]);
 
   return (
     <SafeAreaView
@@ -115,31 +117,36 @@ export default function RoutePlan() {
               }}
             >
               <TouchableHighlight
-                onPress={() => {}}
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  borderRadius: 20,
+                  paddingHorizontal: 32,
+                  paddingVertical: 8,
+                  backgroundColor: "#8BB88B",
+                  justifyContent: "center",
+                }}
+                onPress={() => {
+                  let name = user?.name;
+                  console.log(name);
+                  fetch(
+                    `http://167.235.150.171:8000/api/routes-${name.toLowerCase()}/`
+                  )
+                    .then((res) => res.json())
+                    .then((data) => setData(data));
+                }}
                 underlayColor={"transparent"}
               >
-                <View
+                <Text
                   style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    borderRadius: 20,
-                    paddingHorizontal: 32,
-                    paddingVertical: 8,
-                    backgroundColor: "#8BB88B",
-                    justifyContent: "center",
+                    color: "white",
+                    fontSize: 16,
+                    fontWeight: "bold",
                   }}
                 >
-                  <Text
-                    style={{
-                      color: "white",
-                      fontSize: 16,
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Search
-                  </Text>
-                  {/* <Ionicons name="search" size={28} color="#006400" /> */}
-                </View>
+                  Search
+                </Text>
+                {/* <Ionicons name="search" size={28} color="#006400" /> */}
               </TouchableHighlight>
             </View>
           </View>
@@ -147,78 +154,10 @@ export default function RoutePlan() {
         {/* Results */}
         <View></View>
       </View>
-      <ScrollView style={{}}>
-        <OptionRoute
-          startTime="8:45"
-          endTime="9:03"
-          difference="18"
-          busNumbers={["8", "10"]}
-          delay="+3"
-          bike={true}
-          fullness={1}
-          actual_arrival="9:06"
-        />
-        <OptionRoute
-          startTime="8:45"
-          endTime="9:03"
-          difference="18"
-          busNumbers={["8", "10"]}
-          delay="+7"
-          bike={false}
-          fullness={1}
-          actual_arrival="9:10"
-        />
-        <OptionRoute
-          startTime="8:45"
-          endTime="9:03"
-          difference="18"
-          busNumbers={["8", "10"]}
-          delay="+7"
-          bike={true}
-          fullness={1}
-          actual_arrival="9:10"
-        />
-        <OptionRoute
-          startTime="8:45"
-          endTime="9:03"
-          difference="18"
-          busNumbers={["8", "10"]}
-          delay="+7"
-          bike={true}
-          fullness={1}
-          actual_arrival="9:10"
-        />
-        <OptionRoute
-          startTime="8:45"
-          endTime="9:03"
-          difference="18"
-          busNumbers={["8", "10"]}
-          delay="+7"
-          bike={true}
-          fullness={0}
-          actual_arrival="9:10"
-        />
-        <OptionRoute
-          startTime="8:45"
-          endTime="9:03"
-          difference="18"
-          busNumbers={["8", "10"]}
-          delay="+7"
-          bike={true}
-          fullness={1}
-          actual_arrival="9:10"
-        />
-        <OptionRoute
-          startTime="8:45"
-          endTime="9:03"
-          difference="18"
-          busNumbers={["8", "10"]}
-          delay="+7"
-          bike={false}
-          fullness={2}
-          actual_arrival="9:10"
-        />
-      </ScrollView>
+      <FlatList
+        data={data}
+        renderItem={({ item }) => <OptionRoute data={item} />}
+      ></FlatList>
     </SafeAreaView>
   );
 }
