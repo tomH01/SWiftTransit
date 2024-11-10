@@ -67,6 +67,7 @@ export default function RoutePlan() {
               value={from}
               suggestions={suggestions}
               onChangeText={(text) => {
+                setSuggestions([]);
                 setFrom(text);
                 fetchSuggestions(text);
               }}
@@ -86,6 +87,7 @@ export default function RoutePlan() {
               placeholder="To..."
               value={to}
               onChangeText={(text) => {
+                setSuggestions([]);
                 setTo(text);
                 fetchSuggestions(text);
               }}

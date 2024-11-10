@@ -33,6 +33,7 @@ export default function TextField({
         },
         style,
       ]}
+      focusable={true}
     >
       <TextInput
         placeholder={placeholder}
@@ -42,7 +43,7 @@ export default function TextField({
           setMenuVisible(true);
         }}
         onFocus={() => setMenuVisible(true)}
-        onBlur={() => setMenuVisible(false)}
+        // onBlur={() => setMenuVisible(false)}
       />
       {menuVisible && suggestions && suggestions.length > 0 && (
         <FlatList
