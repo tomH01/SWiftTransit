@@ -137,7 +137,7 @@ class RoutesBoris(APIView):
                     'name': 8,
                     'type': 'bus',
                     'departure': '8:02',
-                    'arrival': '2:52',
+                    'arrival': '8:22',
                     'departure_delay': 3,
                     'arrival_delay': 1,
                     'departure_actual': '8:05',
