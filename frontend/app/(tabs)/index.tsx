@@ -36,7 +36,7 @@ export default function HomeScreen() {
               setUser({
                 ...user,
                 name: "Christiane",
-                surname: "N.-V",
+                surname: "N.-V.",
                 points: 720,
               });
             } else {

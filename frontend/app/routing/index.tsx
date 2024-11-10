@@ -15,17 +15,32 @@ import OptionRoute from "@/components/routing/OptionRoute";
 import Route from "@/types/route";
 import UserContext from "@/hooks/useUserData";
 
+interface SuggestionResponse {
+  id: number;
+  name: string;
+}
+
 export default function RoutePlan() {
   const { user } = useContext(UserContext);
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [data, setData] = useState<Route[][]>([]);
-
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  function fetchSuggestions(value: string) {
+    fetch(
+      "http://167.235.150.171:8000/api/station/prefix_search/?prefix=" + value
+    )
+      .then((res) => res.json())
+      .then((data: SuggestionResponse[]) =>
+        setSuggestions(data.map((d) => d.name))
+      );
+  }
   return (
     <SafeAreaView
       style={{
         backgroundColor: "white",
         height: "100%",
+        zIndex: 10,
       }}
     >
       <View
@@ -50,9 +65,14 @@ export default function RoutePlan() {
             <TextField
               placeholder="From..."
               value={from}
-              onChangeText={setFrom}
+              suggestions={suggestions}
+              onChangeText={(text) => {
+                setFrom(text);
+                fetchSuggestions(text);
+              }}
               style={{
                 flexGrow: 1,
+                zIndex: 10,
               }}
             ></TextField>
           </View>
@@ -65,9 +85,14 @@ export default function RoutePlan() {
             <TextField
               placeholder="To..."
               value={to}
-              onChangeText={setTo}
+              onChangeText={(text) => {
+                setTo(text);
+                fetchSuggestions(text);
+              }}
+              suggestions={suggestions}
               style={{
                 flexGrow: 1,
+                zIndex: 10,
               }}
             ></TextField>
           </View>
@@ -167,5 +192,6 @@ const style = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
+    zIndex: 10,
   },
 });

@@ -15,6 +15,11 @@ export function AccountShortView({
         padding: 8,
         gap: 8,
         alignItems: "center",
+        shadowColor: "black",
+        shadowRadius: 16,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 1,
+        borderRadius: 8,
       }}
       onPress={onPress}
     >
