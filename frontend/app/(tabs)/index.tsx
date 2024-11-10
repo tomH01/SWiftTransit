@@ -33,7 +33,12 @@ export default function HomeScreen() {
           user={user}
           onPress={() => {
             if (user.name == "Boris") {
-              setUser({ ...user, name: "Paul", surname: "H.", points: 720 });
+              setUser({
+                ...user,
+                name: "Christiane",
+                surname: "N.-V",
+                points: 720,
+              });
             } else {
               setUser({ ...user, name: "Boris", surname: "P.", points: 100 });
             }

@@ -124,21 +124,21 @@ export default function RoutePlan() {
                     alignItems: "center",
                     borderRadius: 20,
                     paddingHorizontal: 32,
-                    paddingVertical: 2,
+                    paddingVertical: 8,
                     backgroundColor: "#8BB88B",
                     justifyContent: "center",
                   }}
                 >
-                  {/* <Text
+                  <Text
                     style={{
                       color: "white",
                       fontSize: 16,
                       fontWeight: "bold",
                     }}
                   >
-                    
-                  </Text> */}
-                  <Ionicons name="search" size={28} color="#006400" />
+                    Search
+                  </Text>
+                  {/* <Ionicons name="search" size={28} color="#006400" /> */}
                 </View>
               </TouchableHighlight>
             </View>

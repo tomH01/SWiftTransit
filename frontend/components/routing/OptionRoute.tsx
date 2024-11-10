@@ -37,10 +37,11 @@ export default function OptionRoute({
           alignItems: "center",
           marginVertical: 5,
           marginHorizontal: 10,
-          backgroundColor: "#9c9c9c",
-          borderWidth: 2,
-          borderColor: "#8C8C8C",
-          borderRadius: 10,
+          backgroundColor: "#efefef",
+          borderRadius: 8,
+          // shadowOpacity: 0.5,
+          shadowRadius: 8,
+          shadowOffset: { width: 0, height: 2 },
         },
       ]}
     >
@@ -66,11 +67,8 @@ export default function OptionRoute({
               style={[
                 style.text,
                 {
-                  color: "white",
+                  // color: "white",
                   fontSize: 16,
-                  marginLeft: 20,
-                  borderWidth: 0.1,
-                  borderRadius: 10,
                   fontWeight: "bold",
                   padding: 4,
                 },
@@ -97,16 +95,7 @@ export default function OptionRoute({
             flex: 1,
           }}
         >
-          <Text
-            style={[
-              style.text,
-              {
-                color: "white",
-              },
-            ]}
-          >
-            {difference} min
-          </Text>
+          <Text style={[style.text, {}]}>{difference} min</Text>
         </View>
       </View>
 
